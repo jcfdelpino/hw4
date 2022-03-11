@@ -1,11 +1,11 @@
 <h1 class="text-decoration-underline">New Place</h1>
 
 <%= form_with model: @place do |form| %>
-  <p>
+  <p class = "pt-4">
     <%= form.label "name" %>
     <%= form.text_field "name" %>
   </p>
   <p class="btn btn-primary">
-    <%= form.submit %>
+    <%= form.submit "Create", class: "btn btn-primary btn-sm" %>
   </p>
 <% end %>

@@ -2,7 +2,7 @@
 
 <%= form_with url: "/sessions" do |form| %>
   
-  <p>
+  <p class = "mb-3">
     <%= form.label "email" %>
     <%= form.text_field "email" %>
 
@@ -10,7 +10,7 @@
     <%= form.password_field "password" %>
   </p>
 
-  <p>
-    <%= form.submit "Submit" %>
+  <p class = "mb-3">
+    <%= form.submit "Submit", class: "btn btn-primary btn-sm" %>
   </p>
 <% end %>
