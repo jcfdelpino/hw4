@@ -1,20 +1,29 @@
 <h1 class="text-decoration-underline">New Post</h1>
 
 <%= form_with model: @post do |form| %>
-  <p class = "pt-4">
-    <%= form.label "title" %>
-    <%= form.text_field "title" %>
-  </p>
-  <p class = "pt-4">
-    <%= form.label "description" %>
-    <%= form.text_field "description" %>
-  </p>
-  <p class = "pt-4">
-    <%= form.label "posted_on" %>
-    <%= form.date_field "posted_on" %>
-  </p>
-  <p class = "pt-4">
+  <div class = "mb-4">
+    <%= form.label "title", class: "form-label" %>
+    <%= form.text_field "title", class: "form-control" %>
+  </div>
+  <div class = "mb-4">
+    <%= form.label "description", class: "form-label" %>
+    <%= form.text_field "description", class: "form-control" %>
+  </div>
+  <div class = "mb-4">
+    <%= form.label "posted_on", class: "form-label" %>
+    <%= form.date_field "posted_on", class: "form-control" %>
+  </div>
+
+<div class = "mb-4">
+    <%= form.label "uploaded_image", class: "form-label" %>
+    <%= form.file_field "uploaded_image", accept: "image/png,image/jpg,image/jpeg", class: "form-control" %>
+  </div>
+
+  <div class = "mb-4">
     <%= form.submit "Create Post", class: "btn btn-primary btn-sm" %>
-  </p>
+  </div>
+
+
+
   <%= form.hidden_field "place_id" %>
 <% end %>
